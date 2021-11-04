@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'recipes/new'
+  get 'recipes/show'
+  get 'recipes/edit'
   get 'starts/index'
 
   root "starts#index"

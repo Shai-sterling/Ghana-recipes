@@ -7,9 +7,8 @@ class RecipesController < ApplicationController
   def create
 
     @recipe = Recipe.new(recipe_params)
-    if @recipe 
-      @recipe.save
-      redirect_to @recipe
+    if @recipe.save
+      redirect_to root_path
     else
       render "new"
     end

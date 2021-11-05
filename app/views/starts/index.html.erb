@@ -1,22 +1,39 @@
 
-<div>
-    <p>Welcome to shai Books</p>
-</div>
+    <div>
+        <p>Welcome to shai Books</p>
+    </div>
 
 
-<div>
-    <h3>Recipe Book</h3>
-</div>
-
-
-
+    <div>
+        <h3>Recipe Book</h3>
+    </div>
 
 
 
-<div>
-<%= link_to "Add new recipe ", new_recipe_path %>
+    <div>
+        <% @recipes.each do |recipe| %>
 
-</div>
+            <div>
+                <% if recipe.image.attached? %>
+                    <%= image_tag(recipe.image)%>
+                <% end %>
+            </div>
+
+            <div>
+                <%= recipe.name %>
+            </div>
+        <% end %>
+    </div>
+
+
+
+
+
+
+    <div>
+        <%= link_to "Add new recipe ", new_recipe_path %>
+    </div>
+    
 <div></div>
 <div></div>
 <div></div>

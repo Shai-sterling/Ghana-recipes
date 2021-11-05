@@ -64,19 +64,36 @@
 
 
   //Starts index styling
+
+    .start-index-heading {
+
+        padding: 30px;
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
   .recipe-index-pic-wrapper {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     //background-color: seagreen;
+    justify-content: center;
+    align-items: center;
+
     padding: 20px;
+    
+
+  
 
     .recipe-index-pic {
 
         ////border: 1px solid red;
-        width: 30%;
+        width: 25%;
         border-radius: 5px;
+        //background-color: coral;
+        margin-left: 20px;
 
     
         img {
@@ -84,10 +101,8 @@
             width: 100%;  
             border-radius: 5px;
             height: 400px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+
+            
  
         }
     }
@@ -96,7 +111,6 @@
 
         padding: 5px;
         text-align: center;
-        color: red;
     }
 
   }
@@ -118,11 +132,12 @@
 
       .show-image {
 
-          width: 40%;
+          width: 45%;
 
         img {
 
             width: 100%;
+            max-height: 600px;
             border-radius: 5px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -132,17 +147,47 @@
     
     
     .recipe-show-details {
-        padding: 10px;
+        padding: 15px;
         border-radius: 5px;
         width: 50%;
-        line-height: 2em;
+        line-height: 1.5em;
         font-size: 1.2em;
-
-
-        background-color: springgreen;
+        height: 100%;
+        //background-color: springgreen;
     }
 
 
 
 
+    .recipe-show-buttons {
+
+
+        margin-top: 20px;
+
+        .edit-recipe-btn {
+            border-radius: 2px;
+            padding: 6px;
+            background: rgb(0, 255, 255);
+        } 
+        
+        
+        .delete-recipe-btn {
+           border-radius: 5px;
+            padding: 6px;
+            background-color: rgb(255, 104, 17);
+            margin-left: 5px;
+        }
+    
+    
+        
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+        }
+    }
+    
+
+
+     
   }

@@ -21,7 +21,7 @@
         </div>
 
         <div>
-            <p><%= @recipe.description %></p>
+            <p><%= @recipe.description %></p> 
         </div>
 
         <div>
@@ -29,9 +29,9 @@
 
         </div>
 
-        <div>
-            <%= link_to "Edit", edit_recipe_path(@recipe) %>
-            <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"} %>
+        <div class="recipe-show-buttons">
+            <%= link_to "Edit", edit_recipe_path(@recipe), class: "edit-recipe-btn"%>
+            <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"},  class: "delete-recipe-btn"  %>
 
         </div>
 

@@ -1,29 +1,39 @@
-    <h1>Recipes show</h1>
 
-    <div>
+
+
+<br>
+<br>
+<div class="reciep-show-wrapper">
+
+    <div class="show-image">
         <%= image_tag(@recipe.image) %>
 
     </div>
 
-    <div>
-        <h1><%= @recipe.title %></h1>
+    <div class="recipe-show-details">
+
+        <div>
+            <h1><%= @recipe.title %></h1>
+        </div>
+
+        <div>
+           <strong>Author:</strong> <%= @recipe.name %>
+        </div>
+
+        <div>
+            <p><%= @recipe.description %></p>
+        </div>
+
+        <div>
+            <p><%= @recipe.created_at %></p>
+
+        </div>
+
+        <div>
+            <%= link_to "Edit", edit_recipe_path(@recipe) %>
+            <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"} %>
+
+        </div>
+
     </div>
-
-    <div>
-        <h4><%= @recipe.name %></h4>
-    </div>
-
-    <div>
-        <p><%= @recipe.description %></p>
-    </div>
-
-    <div>
-        <p><%= @recipe.created_at %></p>
-
-    </div>
-
-    <div>
-        <%= link_to "Edit", edit_recipe_path(@recipe) %>
-        <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"} %>
-
-    </div>
+ </div>

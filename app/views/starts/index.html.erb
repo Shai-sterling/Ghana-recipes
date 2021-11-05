@@ -10,18 +10,22 @@
 
 
 
-    <div>
+    <div class="recipe-index-pic-wrapper">
+
         <% @recipes.each do |recipe| %>
 
-            <div>
+            <div class="recipe-index-pic">
+
                 <% if recipe.image.attached? %>
                     <%= link_to (image_tag recipe.image), recipe_path(recipe) %>
                 <% end %>
+
+                <div class="index-author">
+                    Author: <%= recipe.name %>
+                </div>
             </div>
 
-            <div>
-                Author: <%= recipe.name %>
-            </div>
+
         <% end %>
     </div>
 

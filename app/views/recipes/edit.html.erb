@@ -1,2 +1,60 @@
 <h1>Recipes#edit</h1>
-<p>Find me in app/views/recipes/edit.html.erb</p>
+<div>
+        <%= form_with model: @recipe do |form| %>
+
+            <div>
+                <% if @recipe.errors.any? %>
+                    <% @recipe.errors.full_messages_for(:title).each do |msg| %>
+                        <%= msg %>
+                    <% end %>
+                <% end %>
+
+                <%= form.label :title %>
+                <%= form.text_field :title %>
+
+            </div>
+
+            <div>
+
+                <% @recipe.errors.full_messages_for(:name).each do |msg| %>
+                    <%= msg %>
+                <% end %>
+
+                <%= form.label :name %>
+                <%= form.text_field :name %>
+
+            </div>
+
+            <div>
+
+                <% @recipe.errors.full_messages_for(:description).each do |msg| %>
+                    <%= msg %>
+                <% end %>
+
+                <%= form.label :description %>
+                <%= form.text_area :description %>
+
+            </div>
+
+            <div>
+                <%=form.label :upload_image %>
+                <%= form.file_field :image %>
+
+            </div>
+
+            <div>
+
+                <%= form.submit %>
+
+            </div>
+
+
+        <% end %>
+
+    </div>
+
+    <div>
+
+        <%= link_to "Back", root_path %>
+
+    </div>

@@ -14,3 +14,46 @@
  *= require_self
 
  */
+    * {
+
+        margin:0;
+        padding: 0;
+    }
+    
+
+
+ .nav-wrapper {
+
+
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 10vh;
+
+
+
+    .logo {
+        width: 30%;
+        //background-color: rebeccapurple;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    .nav-items {
+
+        //background-color: saddlebrown;
+        max-width: 60%;
+        padding: 20px;
+        
+
+
+        .nav-list {
+            display: inline;
+            font-size: 1.2em;
+            padding: 10px;
+        }
+    }
+ }

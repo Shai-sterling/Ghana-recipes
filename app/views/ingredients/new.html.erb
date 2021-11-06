@@ -1,0 +1,29 @@
+
+<h1>Add Ingredient</h1>
+
+<div>
+    <%= form_with model: [ @recipe, @recipe.ingredients.build ] do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :quantity %>
+        <%= form.number_field :quantity %>
+    </div>
+
+    <div>
+        <%= form.label :unit %>
+        <%= form.text_field :unit %>
+    </div>
+
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+    <% end %>
+
+</div>

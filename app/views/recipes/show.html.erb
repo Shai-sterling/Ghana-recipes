@@ -66,23 +66,7 @@
     </div>
 
 
+    <%= render "reviews/review"%>
+
  </div>
-    <div class="review-wrapper">
-
-        <% @recipe.reviews.each do |review| %>
-
-            <div>
-                <%=  review.rating %>
-            </div>
-
-            <div>
-                <%=  review.body %>
-            </div>
-
-            <div>
-                <%= link_to "Edit review", edit_recipe_review_path(@recipe, review) %>
-                <%= link_to "Delete review", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"} %>
-            </div>
-
-        <% end %>
-    </div>
+  

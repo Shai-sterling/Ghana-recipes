@@ -1,0 +1,26 @@
+
+<h1>Add Review</h1>
+
+
+
+<div>
+    <%= form_with model:([@recipe, @recipe.reviews.build]) do |form|%>
+     
+        <div>
+            <p><%= form.label :rating %></p>
+            <%= form.number_field :rating %>
+        </div>
+
+        <div>
+            <p><%= form.label :review %></p>
+            <%= form.text_area :body %>
+        </div>
+
+    
+        <div>
+            <%= form.submit %>
+        </div>
+
+    <% end %>
+</div>
+

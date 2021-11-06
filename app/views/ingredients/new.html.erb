@@ -15,8 +15,8 @@
     </div>
 
     <div>
-        <%= form.label :unit %>
-        <%= form.text_field :unit %>
+        <p><%= form.label :unit %></p>
+        <%= form.select :unit, ["g", "ml", "tablespoons", "teaspoons" ] %>
     </div>
 
 

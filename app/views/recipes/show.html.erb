@@ -21,7 +21,7 @@
         </div>
 <br>
         <div>
-            <p><%= @recipe.description %></p> 
+            <p><%= truncate(@recipe.description) %></p> 
         </div>
 
         <div>
@@ -81,6 +81,7 @@
 
             <div>
                 <%= link_to "Edit review", edit_recipe_review_path(@recipe, review) %>
+                <%= link_to "Delete review", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"} %>
             </div>
 
         <% end %>

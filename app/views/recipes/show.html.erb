@@ -58,8 +58,8 @@
         </div>
 
         <div class="recipe-show-buttons">
-            <%= link_to "Edit", edit_recipe_path(@recipe), class: "edit-recipe-btn"%>
-            <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"},  class: "delete-recipe-btn"  %>
+            <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "edit-recipe-btn"%>
+            <%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"},  class: "delete-recipe-btn"  %>
 
         </div>
 
@@ -77,6 +77,10 @@
 
             <div>
                 <%=  review.body %>
+            </div>
+
+            <div>
+                <%= link_to "Edit review", edit_recipe_review_path(@recipe, review) %>
             </div>
 
         <% end %>

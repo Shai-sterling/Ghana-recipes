@@ -4,6 +4,9 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @recipe = Recipe.find(params[:recipe_id])
+    @review = @recipe.reviews.find(params[:id])
+
   end
 
 
@@ -11,7 +14,7 @@ class ReviewsController < ApplicationController
 
   def create
     @recipe =  Recipe.find(params[:recipe_id])
-    @review =  @recipe.reviews.create(review_params)
+    @review = @recipe.reviews.create(review_params)
     redirect_to @recipe
 
   end

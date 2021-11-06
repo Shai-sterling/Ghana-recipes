@@ -130,21 +130,24 @@
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
-    //background-color: violet;
-    justify-content: space-around;
+    background-color: violet;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
 
 
 
       .show-image {
 
           width: 45%;
+          max-height: 500px;
 
         img {
 
             width: 100%;
-            max-height: 600px;
+            max-height: 500px;
+
             border-radius: 10px;
-            background-repeat: no-repeat;
             background-size: cover;
             image-rendering: -moz-crisp-edges; /* Firefox */
             image-rendering: -o-crisp-edges; /* Opera */
@@ -159,13 +162,14 @@
     
     
     .recipe-show-details {
-        padding: 15px;
+        padding: 20px;
         border-radius: 5px;
         width: 50%;
-        line-height: 1.5em;
+        line-height: 1.2em;
         font-size: 1.2em;
-        height: 100%;
-        //background-color: springgreen;
+        overflow: scroll;
+        height: 400px;
+        background-color: springgreen;
     }
 
 
@@ -202,4 +206,22 @@
 
 
      
+  }
+
+
+
+
+
+
+
+
+  //Review Styling
+
+  .review-wrapper {
+
+    width: 50%;
+
+
+
+    background: red;
   }

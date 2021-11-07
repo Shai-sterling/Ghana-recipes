@@ -10,6 +10,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 require("packs/raty") 
+require('jquery');
 
 Rails.start()
 Turbolinks.start()

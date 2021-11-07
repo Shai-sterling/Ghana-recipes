@@ -4,8 +4,8 @@
 
         <div class="reviews">
 
-            <div id="rating-stars">
-                <p><%=  review.rating %>   </p>
+            <div id="star-rating" data-score=<%=  review.rating %>  >
+
             </div>
 
             <div class="review-body">
@@ -24,6 +24,7 @@
             <%= link_to "Add Review", new_recipe_review_path(@recipe), class: "add-review" %>
         </div>
 </div>
+
 
 
 

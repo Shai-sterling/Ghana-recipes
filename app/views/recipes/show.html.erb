@@ -15,11 +15,15 @@
         <div>
             <h1><%= @recipe.title %></h1>
         </div>
-<br>
+
+        <br>
+
         <div>
            <strong>Author:</strong> <%= @recipe.name %>
         </div>
-<br>
+
+        <br>
+
         <div>
             <p><%= @recipe.description %></p> 
         </div>
@@ -53,3 +57,19 @@
 
 
 
+    <%# raty js selects div with #star-rating setting number of rating to stars
+        div with #star-rating is being rendered on the show view of a recipe.
+
+    %>
+    
+    <script>
+
+        $("#star-rating").raty({
+            path: "/assets/",
+            readOnly: true,
+            score: function () {
+                return $(this).attr("data-score");   
+            }
+        });
+
+    </script>

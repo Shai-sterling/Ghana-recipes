@@ -1,15 +1,16 @@
+
 <h1>Edit Reviews</h1>
 
 <div>
     <%= form_with model: [@recipe, @review] do |form|%>
      
-        <div>
+        <div id="stars">
             <p><%= form.label :rating %></p>
-            <%= form.number_field :rating %>
+            <%#= form.number_field :rating %>
         </div>
 
         <div>
-            <p><%= form.label :review %></p>
+            <p><%= form.label :comment %></p>
             <%= form.text_area :body %>
         </div>
 
@@ -20,4 +21,5 @@
 
     <% end %>
 </div>
+
 

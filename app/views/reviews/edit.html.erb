@@ -1,12 +1,11 @@
 
-<h1>Edit Reviews</h1>
+<h1 class="edit-review-heading">Edit Reviews</h1>
 
 <div>
     <%= form_with model: [@recipe, @review] do |form|%>
      
         <div id="stars">
             <p><%= form.label :rating %></p>
-            <%#= form.number_field :rating %>
         </div>
 
         <div>
@@ -23,3 +22,11 @@
 </div>
 
 
+
+
+<script>
+    $("#stars").raty({
+        path: "/assets/",
+        scoreName: "review[rating]"
+    });
+</script>

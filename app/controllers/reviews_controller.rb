@@ -18,7 +18,16 @@ class ReviewsController < ApplicationController
     redirect_to @recipe
 
   end
+  
 
+
+  def update
+    
+    @recipe =  Recipe.find(params[:recipe_id])
+    @review = @recipe.reviews.update(review_params)
+    redirect_to @recipe
+
+  end
 
 
 

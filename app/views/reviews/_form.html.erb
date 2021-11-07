@@ -1,16 +1,16 @@
 
-<h1>Add Review</h1>
+<h1 class="add-review-heading">Add Review</h1>
 
 
 
 <div>
     <%= form_with model:([@recipe, @recipe.reviews.build]) do |form|%>
      
-        <div>
+        <div id="" >
             <p><%= form.label :rating %></p>
             <%= form.number_field :rating %>
         </div>
-
+<br>
         <div>
             <p><%= form.label :review %></p>
             <%= form.text_area :body %>

@@ -1,24 +1,30 @@
-  <div class="review-wrapper">
+<div class="review-wrapper">
 
-        <% @recipe.reviews.each do |review| %>
+    <% @recipe.reviews.each do |review| %>
 
-            <div id="review-stars" data-score="<%=  review.rating %>">
+        <div class="reviews">
 
-            </div>
-            
-
-            <div>
-                <%= review.body %>
+            <div id="rating-stars">
+                <p><%=  review.rating %>   </p>
             </div>
 
-            <div>
-                <%= link_to "Add Review", new_recipe_review_path(@recipe) %>
-                <%= link_to "Edit review", edit_recipe_review_path(@recipe, review) %>
-                <%= link_to "Delete review", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"} %>
+            <div class="review-body">
+                <%=  review.body %>
             </div>
 
-        <% end %>
-    </div>
+            <div class="review-buttons">
+                <%= link_to "Edit review", edit_recipe_review_path(@recipe, review), class: "edit-review" %>
+                <%= link_to "Delete review", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"}, class: "delete-review" %>
+            </div>
+        </div>
+
+    <% end %>
+
+        <div class="add-review-wrapper">
+            <%= link_to "Add Review", new_recipe_review_path(@recipe), class: "add-review" %>
+        </div>
+</div>
+
 
 
 

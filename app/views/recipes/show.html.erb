@@ -40,13 +40,16 @@
         <div class="recipe-show-buttons">
             <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "edit-recipe-btn"%>
             <%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete, data: { confirm: " Are you sure?"},  class: "delete-recipe-btn"  %>
-
         </div>
 
     </div>
 
 
-    <%= render "reviews/review"%>
 
  </div>
   
+
+    <%= render "reviews/review"%>
+
+
+

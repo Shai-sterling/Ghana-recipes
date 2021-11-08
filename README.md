@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Description
 
-* System dependencies
 
-* Configuration
+Ghana Recipes
 
-* Database creation
+This is a web application that displays Ghanaian food recipes. 
+The application can be used by anyone who wants to learn how to cook Ghanaian foods.
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Instruction
 
-* ...
+You need a desktop to be able to start using this web application.
+Google fonts added for setting fonts.
+This Application has three models(Recipe, Ingredient and review).
+Recipe model has-many-to-may relationship with Ingredient and Review.
+
+

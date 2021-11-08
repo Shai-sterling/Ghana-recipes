@@ -10,23 +10,17 @@ class IngredientsController < ApplicationController
         redirect_to @recipe
     end
 
-
-
     def edit
         @recipe =  Recipe.find(params[:recipe_id])
         @ingredient =  @recipe.ingredients.find(params[:id])
     end
 
-
-
     def update
         @recipe =  Recipe.find(params[:recipe_id])
+        @ingredient = @recipe.ingredients.find(params[:id])
         @ingredient.update(ingredient_params)
         redirect_to @recipe 
     end
-
-
-
 
 
     def destroy  
@@ -37,19 +31,10 @@ class IngredientsController < ApplicationController
     end
 
 
-
-
-
-
     private
-
-    
-
-   
 
     def ingredient_params
         params.require(:ingredient).permit(:name, :quantity, :unit)
     end
 
-    
 end

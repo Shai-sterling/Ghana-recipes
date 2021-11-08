@@ -10,8 +10,6 @@ class ReviewsController < ApplicationController
   end
 
 
-
-
   def create
     @recipe =  Recipe.find(params[:recipe_id])
     @review = @recipe.reviews.create(review_params)
@@ -19,7 +17,6 @@ class ReviewsController < ApplicationController
 
   end
   
-
 
   def update
     
@@ -29,13 +26,6 @@ class ReviewsController < ApplicationController
 
   end
 
-
-
-
-
-
-
-
   def destroy  
     @recipe =  Recipe.find(params[:recipe_id])
     @review =  @recipe.reviews.find(params[:id])
@@ -44,20 +34,11 @@ class ReviewsController < ApplicationController
 end
 
 
-
-
-
-
   private
-
-
-
 
   def review_params
 
-    params.require(:review).permit(:body, :rating )
-
-
+    params.require(:review).permit(:body, :rating)
 
   end
 

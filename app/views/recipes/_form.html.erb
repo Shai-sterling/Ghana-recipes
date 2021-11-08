@@ -1,5 +1,6 @@
-<h1>Recipes#edit</h1>
-<div>
+<h1 class="edit-recipe-heading" >Edit recipe</h1>
+
+    <div>
         <%= form_with model: @recipe do |form| %>
 
             <div>
@@ -15,37 +16,30 @@
             </div>
 
             <div>
-
                 <% @recipe.errors.full_messages_for(:name).each do |msg| %>
                     <%= msg %>
                 <% end %>
 
                 <%= form.label :name %>
                 <%= form.text_field :name %>
-
             </div>
 
             <div>
-
                 <% @recipe.errors.full_messages_for(:description).each do |msg| %>
                     <%= msg %>
                 <% end %>
 
                 <%= form.label :description %>
                 <%= form.text_area :description %>
-
             </div>
 
             <div>
                 <%=form.label :upload_image %>
                 <%= form.file_field :image %>
-
             </div>
 
             <div>
-
                 <%= form.submit %>
-
             </div>
 
 
@@ -53,8 +47,7 @@
 
     </div>
 
-    <div>
-
+   
+    <div class="back-btn">
         <%= link_to "Back", root_path %>
-
     </div>

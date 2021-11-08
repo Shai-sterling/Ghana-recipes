@@ -1,14 +1,9 @@
 
-    <div>
-        <p>Welcome to shai Books</p>
-    </div>
-
+    <h4 class="start-welcome">Welcome to </h4>
 
     <div>
-        <h1 class="start-index-heading">Recipe Book</h1>
+        <h1 class="start-index-heading"> Recipes From Ghana</h1>
     </div>
-
-
 
     <div class="recipe-index-pic-wrapper">
 
@@ -17,27 +12,19 @@
             <div class="recipe-index-pic">
 
                 <% if recipe.image.attached? %>
-                    <%= link_to (image_tag recipe.image), recipe_path(recipe) %>
+                    <%= image_tag(recipe.image) %>
                 <% end %>
 
                 <div class="index-author">
-                     <%#= recipe.name %>
+                     <%= link_to recipe.title, recipe_path(recipe) %>
                 </div>
             </div>
-
 
         <% end %>
     </div>
 
 
-
-
-
-
-    <div>
-        <%= link_to "Add new recipe ", new_recipe_path %>
+    <div class="add-recipe">
+        <%= link_to "add recipe ", new_recipe_path %>
     </div>
 
-<div></div>
-<div></div>
-<div></div>

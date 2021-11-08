@@ -1,28 +1,24 @@
     <div>
+        <h4>Ingredients</h4>
         <ul>
             <%  @recipe.ingredients.each do |ingredient| %>
 
-                <div> 
-                    <%= ingredient.name %>
-                </div>
+                <div class="ingredient-details">
+            
+                    <li><%= ingredient.name %> - <%= ingredient.quantity %> <%= ingredient.unit%></li>
 
-                <div>
-                    <%= ingredient.quantity %>
-                </div>
+                    <%= link_to "edit ", edit_recipe_ingredient_path(@recipe, ingredient) %>
+                    <%= link_to "delete ", recipe_ingredient_path(@recipe, ingredient), method: :delete, data: { confirm: "Are you sure?" } %>
 
-                <div>
-                <%= ingredient.unit %>
                 </div>
-
-                <%= link_to "Edit ingredient", edit_recipe_ingredient_path(@recipe, ingredient) %>
-                <%= link_to "Delete ingredient", recipe_ingredient_path(@recipe, ingredient), method: :delete, data: { confirm: "Are you sure?" } %>
 
             <% end %>
         </ul>
 
     </div>
 
-    <div>
-        <%= link_to "Add ingredient", new_recipe_ingredient_path(@recipe) %>
-
+    <div class="add-ingredient">
+        <%= link_to "add ingredient", new_recipe_ingredient_path(@recipe) %>
     </div>
+
+

@@ -4,29 +4,25 @@
 
         <div class="reviews">
 
-            <div id="star-rating" data-score=<%=  review.rating %>  >
-
-            </div>
+            <div id="star-rating" data-score=<%= review.rating %> ></div>
 
             <div class="review-body">
                 <%=  review.body %>
             </div>
 
             <div class="review-buttons">
-                <%= link_to "Edit review", edit_recipe_review_path(@recipe, review), class: "edit-review" %>
-                <%= link_to "Delete review", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"}, class: "delete-review" %>
+                <%= link_to "edit", edit_recipe_review_path(@recipe, review), class: "edit-review" %>
+                <%= link_to "delete ", recipe_review_path(@recipe, review), method: :delete , data: { confirm: "Are you sure?"}, class: "delete-review" %>
             </div>
         </div>
 
     <% end %>
 
-        <div class="add-review-wrapper">
-            <%= link_to "Add Review", new_recipe_review_path(@recipe), class: "add-review" %>
-        </div>
+    <div class="add-review-wrapper">
+        <%= link_to "add review", new_recipe_review_path(@recipe), class: "add-review" %>
+    </div>
+    
 </div>
-
-
-
 
 
 

@@ -18,23 +18,60 @@
 
         margin:0;
         padding: 0;
+        box-sizing: border-box;
     }
+
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+  
     
 
     //Nav stylings with links
 
+
+
+
+    @media (max-width: 992px) {
+       
+     
+        .nav-wrapper {
+            height: auto !important;
+            justify-content: space-between !important;
+           
+        }
+
+        .logo {
+            font-size: 1.7em !important;
+
+        }
+
+
+        .nav-items {
+
+            width: 80% !important;
+        }
+
+        .nav-list {
+            margin: 5px !important;
+            font-size: 1em !important;
+        }
+    }
+
+
+
     .nav-wrapper {
 
-
-        background-color: rgb(0, 0, 0);
+        width: 100;
+        background-color: #ef815e;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         color: white;
-        height: 10vh;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
 
 
 
@@ -43,13 +80,13 @@
 
             width: 30%;
             //background-color: rebeccapurple;
-            font-size: 2.5em;
+            font-size: 1.6em;
             font-weight: bold;
         }
 
         .nav-items {
 
-            //background-color: saddlebrown;
+           // background-color: saddlebrown;
             max-width: 60%;
             padding: 20px;
             
@@ -57,7 +94,7 @@
 
             .nav-list {
                 display: inline;
-                font-size: 1.2em;
+                font-size: 0.8em;
                 padding: 10px;
             }
         }
@@ -65,255 +102,7 @@
 
 
 
-  //Starts index styling
-
-    .start-index-heading {
-
-        padding: 30px;
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 10px;
-
-    }
-
-    .recipe-index-pic-wrapper {
-
-        display: flex;
-        flex-wrap: wrap;
-        //background-color: seagreen;
-        justify-content: center;
-        align-items: center;
-
-        padding: 20px;
-        
-
-  
-
-        .recipe-index-pic {
-
-            ////border: 1px solid red;
-            width: 25%;
-            border-radius: 5px;
-            //background-color: coral;
-            margin-left: 20px;
-
-        
-            img {
-
-                width: 100%;  
-                border-radius: 5px;
-                height: 400px;
-                image-rendering: -moz-crisp-edges; /* Firefox */
-                image-rendering: -o-crisp-edges; /* Opera */
-                image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-                image-rendering: crisp-edges;
-                -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-
-
-    
-            }
-        }
-
-        .index-author {
-
-            padding: 5px;
-            text-align: center;
-        }
-
-    }
-
-
-
-
-  //Recipe show styling
-
-
-  .reciep-show-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px;
-       // background-color: violet;
-        justify-content: space-between;
-        align-items: center;
-        height: auto;
-
-
-
-        .show-image {
-
-            width: 45%;
-            max-height: 500px;
-
-            img {
-
-                width: 100%;
-                max-height: 500px;
-                border-radius: 10px;
-                background-size: cover;
-                image-rendering: -moz-crisp-edges; /* Firefox */
-                image-rendering: -o-crisp-edges; /* Opera */
-                image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-                image-rendering: crisp-edges;
-                -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-
-
-            }
-        
-        }
-    
-    
-        .recipe-show-details {
-
-
-            padding: 20px;
-            border-radius: 5px;
-            width: 50%;
-            line-height: 1.2em;
-            font-size: 1.2em;
-            overflow: scroll;
-            height: 400px;
-            //background-color: springgreen;
-        }
-
-
-
-
-        .recipe-show-buttons {
-
-
-            margin-top: 20px;
-
-            .edit-recipe-btn {
-                border-radius: 5px;
-                padding: 6px;
-                background: rgb(0, 255, 255);
-            } 
-            
-            
-            .delete-recipe-btn {
-            border-radius: 5px;
-                padding: 6px;
-                background-color: rgb(255, 104, 17);
-                margin-left: 5px;
-            }
-        
-        
-            
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 1.2em;
-            }
-        }
-        
-     
-    }
-
-
-
-
-
-
-
-
-  //Review Styling
-
-    .review-wrapper {
-
-            width: 50%;
-            //background: rgb(245, 245, 245);
-            padding: 30px;
-
-  
-        
-        .reviews{
-        
-        
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-            margin-top: 20px;
-            border-radius: 10px;
-        
-        
-            #rating-stars  {
-        
-                padding: 20px;
-                //background-color: coral;
-            }
-        
-        
-        
-        
-            .review-body  {
-                padding: 20px;
-                //background-color: rgb(235, 16, 180);
-        
-        
-            }
-        
-        
-        
-            .review-buttons { 
-        
-                 padding: 20px;
-        
-                .edit-review {
-                    margin-top: 30px;
-                    border-radius: 5px;
-                    padding: 6px;
-                    background: rgb(0, 255, 255);
-                    text-decoration: none;
-                    color: black;
-            
-            
-                }
-                
-                .delete-review {
-                
-                    border-radius: 5px;
-                    padding: 6px;
-                    background-color: rgb(255, 104, 17);
-                    text-decoration: none;
-                    color: black;
-                    margin-left: 20px;
-                
-                }
-        
-            }
-
-        }    
-
-    }
-
-
-    .add-review-heading {
-        margin: auto;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-
-
-    .add-review-wrapper {
-
-        padding: 20px;
-        //background-color: crimson;
-
-        .add-review {
-      
-          padding: 10px;
-          background: rgb(0, 162, 255);
-          text-decoration: none;
-          color: white;
-        }
-
-    }
-
-
-
-
-
-    form {
+   form {
 
         width: 50%;
         padding: 20px;
@@ -323,7 +112,6 @@
         input, select {
             width: 100%;
             height: 40px;
-            font-size: 0.7em;
             padding: 2px;
 
         }
@@ -333,7 +121,6 @@
 
             height: 150px;
             width: 100%;
-            font-size: 1em;
         }
         input[type=submit] {
 
@@ -347,4 +134,25 @@
 
         }
         
+    }
+
+
+
+
+    .back-btn {
+
+        padding: 20px;
+        margin-top: 100px ;
+        width: 30%;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            background: rgb(223, 223, 223);
+            padding: 10px;
+
+        }
+
+
     }

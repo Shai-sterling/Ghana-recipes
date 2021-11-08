@@ -1,3 +1,92 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+
+
+  //Review Styling
+
+    .review-wrapper {
+
+        width: 40%;
+        padding: 10px;
+        margin-left: 60px;
+
+        .reviews{
+
+            width: 100%;
+            border-radius: 10px;
+            padding: 20px;
+
+            #rating-stars  {
+
+                padding-left: 10px;
+                background-color: coral;
+            }
+
+            .review-body  {
+                padding-top: 10px;
+
+
+            }
+
+            .review-buttons { 
+
+                margin-top: 10px;
+                padding-top: 10px ;
+
+                .edit-review {
+                    margin-top: 20px;
+                    text-decoration: none;
+                    color:  #ef815e;
+                    font-size: 14px;
+                }
+                
+                .delete-review {
+                
+                    text-decoration: none;
+                    color: #ef815e;
+                    margin-left: 10px;
+                    font-size: 14px;
+                
+                }
+
+            }
+
+        }    
+
+    }
+
+
+    .add-review-heading {
+        margin: auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+
+    .add-review-wrapper {
+
+        padding: 20px;
+
+        .add-review {
+            padding: 5px;
+            background:   #79D7D0;
+            font-size: 1em;
+            border-radius: 4px;
+            color: white;
+            border: 2px solid #79D7D0;
+            text-decoration: none;
+            font-weight: normal;
+
+        }
+
+    }
+
+
+
+
+

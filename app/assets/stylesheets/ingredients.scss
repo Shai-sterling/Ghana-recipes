@@ -1,3 +1,78 @@
 // Place all the styles related to the ingredients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+@media (max-width: 686px) {
+
+    .add-ingredient {
+
+        margin-top: 20px !important;
+        padding: 0 !important;
+
+        a {
+
+            font-size: 0.8em !important;
+
+        }
+    }
+
+
+
+
+    .ingredient-details  {
+        font-size: 12px !important;
+    }
+
+
+}
+
+.ingredient-heading {
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ingredient-details {
+
+   // background-color: deeppink;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+
+
+    a {
+        text-decoration: none;
+        font-size: 14px;
+        margin: 2px;
+        color: rgb(255, 104, 17);
+
+    }
+}
+
+
+
+
+.add-ingredient {
+    
+    //background: yellow;
+    padding: 20px;
+
+    a{
+        text-decoration: none;
+
+        padding: 5px ;
+        border: 2px solid #79d7d0;
+        margin-top: 10px;
+        width: 20%;
+        border-radius: 4px;
+        font-size: 1em;
+        font-weight: 500;
+        color: #79d7d0;
+        font-weight: normal;
+
+
+    }
+}

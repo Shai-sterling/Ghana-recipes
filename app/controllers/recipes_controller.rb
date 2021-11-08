@@ -26,6 +26,7 @@ class RecipesController < ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
+
    if @recipe.update(recipe_params)
     redirect_to @recipe
    else
@@ -35,8 +36,6 @@ class RecipesController < ApplicationController
   end
 
 
-
-
   def destroy
 
     @recipe = Recipe.find(params[:id])
@@ -44,9 +43,6 @@ class RecipesController < ApplicationController
     redirect_to root_path
 
   end
-
-
-
 
   private
 
@@ -62,4 +58,5 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:title, :name, :description, :image)
 
   end
+  
 end

@@ -1,6 +1,6 @@
-<h1>Add Ingredient</h1>
+<h1 class="ingredient-heading">Add Ingredient</h1>
 
-<div >
+<div>
     <%= form_with model: [ @recipe, @recipe.ingredients.build ] do |form| %>
 
     <div>
@@ -28,7 +28,6 @@
 </div>
 
 
-<div>
+<div class="back-btn">
     <%= link_to "Back", root_path %>
-
 </div>

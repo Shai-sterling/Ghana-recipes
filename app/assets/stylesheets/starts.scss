@@ -1,3 +1,122 @@
 // Place all the styles related to the Starts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+  //Starts index styling
+
+
+.start-welcome {
+    
+    text-align: center;
+    margin-top: 40px;
+}  
+
+
+.start-index-heading {
+
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.recipe-index-pic-wrapper {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    
+
+
+
+    .recipe-index-pic {
+
+        width: 25%;
+        border-radius: 5px;
+        margin-left: 20px;
+
+    
+        img {
+
+            width: 100%;  
+            border-radius: 5px;
+            height: 400px;
+            image-rendering: -moz-crisp-edges; /* Firefox */
+            image-rendering: -o-crisp-edges; /* Opera */
+            image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+
+        }
+    }
+
+    .index-author {
+
+        padding: 5px;
+        text-align: center;
+
+        a {
+
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+    }
+
+}
+
+
+
+    .add-recipe {
+
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+        margin: auto;
+
+        a{
+
+            padding: 5px;
+            background:   #79D7D0;
+            font-size: 1em;
+            border-radius: 4px;
+            color: white;
+            border: 2px solid #79D7D0;
+            text-decoration: none;
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+@media (max-width: 718px) {
+
+
+    .start-index-heading{
+
+        font-size: 2em !important;
+    }
+
+    .recipe-index-pic-wrapper {
+
+        justify-content: space-evenly !important;
+    }  
+    
+    .recipe-index-pic {
+        width: 40% !important;
+        margin: 20px !important;
+
+
+
+    }
+}

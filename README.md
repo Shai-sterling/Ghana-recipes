@@ -5,7 +5,7 @@
 Description
 
 
-Ghana Recipe
+Ghana Recipes
 
 This is a web application that displays Ghanaian food recipes. 
 The application can be used by anyone who wants to learn how to cook Ghanaian foods.

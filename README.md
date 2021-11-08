@@ -20,8 +20,7 @@ Based on a user Interractions:
 
 Instruction
 
-You need a desktop, Ruby 3.0, rails 6.1 or higher, SQLite3 or any other database to be able to start using this web application.
-Google fonts CDN added for setting fonts.
+You need a desktop, Ruby 3.0, rails 6.1 or higher, SQLite3 or any other database to be able to start this web application. Google added by CDN added for setting fontsl.
 This Application has three models(Recipe, Ingredient and review).
 Recipe model has-many-to-may relationship with Ingredient and Review.
 

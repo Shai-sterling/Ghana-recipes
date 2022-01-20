@@ -3,30 +3,27 @@
 <div>
     <%= form_with model: [ @recipe, @recipe.ingredients.build ] do |form| %>
 
-    <div>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
-    </div>
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
 
-    <div>
-        <%= form.label :quantity %>
-        <%= form.number_field :quantity %>
-    </div>
+        <div>
+            <%= form.label :quantity %>
+            <%= form.number_field :quantity %>
+        </div>
 
-    <div>
-        <p><%= form.label :unit %></p>
-        <%= form.select :unit, ["g", "ml", "tablespoons", "teaspoons" ] %>
-    </div>
+        <div>
+            <p><%= form.label :unit %></p>
+            <%= form.select :unit, ["g", "ml", "tablespoons", "teaspoons" ] %>
+        </div>
 
-
-    <div>
-        <%= form.submit %>
-    </div>
+        <div>
+            <%= form.submit %>
+        </div>
 
     <% end %>
-
 </div>
-
 
 <div class="back-btn">
     <%= link_to "Back", root_path %>

@@ -1,30 +1,29 @@
 
-    <h4 class="start-welcome">Welcome to </h4>
+<h4 class="start-welcome">Welcome to </h4>
 
-    <div>
-        <h1 class="start-index-heading"> Ghana recipes</h1>
-    </div>
+<div>
+    <h1 class="start-index-heading"> Ghana recipes</h1>
+</div>
 
-    <div class="recipe-index-pic-wrapper">
+<div class="recipe-index-pic-wrapper">
 
-        <% @recipes.each do |recipe| %>
+    <% @recipes.each do |recipe| %>
 
-            <div class="recipe-index-pic">
+        <div class="recipe-index-pic">
 
-                <% if recipe.image.attached? %>
-                    <%= image_tag(recipe.image) %>
-                <% end %>
+            <% if recipe.image.attached? %>
+                <%= image_tag(recipe.image) %>
+            <% end %>
 
-                <div class="index-author">
-                     <%= link_to recipe.title, recipe_path(recipe) %>
-                </div>
+            <div class="index-author">
+                 <%= link_to recipe.title, recipe_path(recipe) %>
             </div>
+        </div>
 
-        <% end %>
-    </div>
+    <% end %>
+</div>
 
-
-    <div class="add-recipe">
-        <%= link_to "add recipe ", new_recipe_path %>
-    </div>
+<div class="add-recipe">
+    <%= link_to "add recipe ", new_recipe_path %>
+</div>
 

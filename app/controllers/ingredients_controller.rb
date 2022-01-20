@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
     
- before_action :set_recipe, only: %i[new show edit destroy update]  
+ before_action :set_recipe, only: %i[new show edit destroy update create]  
 
 def new
 end
